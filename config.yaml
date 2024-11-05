@@ -1,0 +1,2 @@
+agent: PPO # PPO, AC
+episoes: 100 # Number of episodes
