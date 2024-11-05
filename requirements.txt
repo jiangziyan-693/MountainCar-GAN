@@ -1,0 +1,6 @@
+gym == 0.22.0 # gym版本必须为0.22.0
+ale-py == 0.7.2 # ale-py版本必须为0.7.2
+numpy
+torch
+matplotlib
+pyyaml
