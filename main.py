@@ -190,7 +190,7 @@ if config['agent'] == 'AC':
 elif config['agent'] == 'PPO':
     agent = AdvantagePPOAgent(env)
 
-# 训练与测试
+# 训练与测试(包含效果可视化)
 def play_episode(env, agent, max_episode_steps=None, mode=None, render=False):
     observation, reward, done = env.reset(), 0., False
     agent.reset(mode=mode)
@@ -223,6 +223,8 @@ for episode in itertools.count():
             episode, episode_reward, elapsed_steps)
     if len(episode_rewards) == config['episodes']:
         break
+
+# 奖励可视化
 plt.plot(episode_rewards)
 plt.xlabel('Episode')
 plt.ylabel('Reward')
